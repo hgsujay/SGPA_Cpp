@@ -199,12 +199,18 @@ int main()
                     cout<<endl<<"********************************************************************************"<<endl;
                     break;
            case 3 :
+                    cout<<"Source code available at https://github.com/hgsujay/SGPA_Cpp   "<<endl;
+                    cout<<"press any key to quit\n";
+                    char quit;
+                    cin>>quit;
+
                     cout<<"Quiting the process...";
                     for(int i=0;i<=10000000;i++)
                     {
                         cout<<"";
                     }
                     break;
+
             default :
                         cout<<"incorrect option"<<endl;
                         break;
