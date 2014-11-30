@@ -3,6 +3,7 @@
 #include<string>
 #include<cstring>
 #include<stdlib.h>
+#include<conio.h>
 #define NUM 172
 using namespace std;
 
@@ -201,8 +202,7 @@ int main()
            case 3 :
                     cout<<"Source code available at https://github.com/hgsujay/SGPA_Cpp   "<<endl;
                     cout<<"press any key to quit\n";
-                    char quit;
-                    cin>>quit;
+                    getch();
 
                     cout<<"Quiting the process...";
                     for(int i=0;i<=10000000;i++)
