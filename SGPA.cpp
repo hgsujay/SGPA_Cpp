@@ -2,7 +2,11 @@
 #include<fstream>
 #include<string>
 #include<cstring>
+<<<<<<< HEAD
 #include<cstdlib>
+=======
+#include<stdlib.h>
+>>>>>>> 6867d2d3409a49523ad37caa3203753c66097434
 #include<conio.h>
 #define NUM 172
 using namespace std;
@@ -155,7 +159,11 @@ int main()
     student::sort_gpa();    //calling the function to sort the gpa
     cout<<"********************************************************************************"<<endl;
     string ip_usn;      //input usn declaration
+<<<<<<< HEAD
     string option_X;
+=======
+    int option_X;
+>>>>>>> 6867d2d3409a49523ad37caa3203753c66097434
     cout<<"\t\t\tSGPA analysis program\n";
     cout<<"\t\tAnalysing 4th sem ECE(2013-14) results\n\n\n";
     cout<<"\t\t   You have the following options:"<<endl;
@@ -171,6 +179,7 @@ int main()
         cout<<"\t\t\t --------------------"<<endl;
         cin>>option_X;      //menu variable
 
+<<<<<<< HEAD
         if(strcmp(option_X.c_str(), "1") == 0)
         {
             cout<<"Enter the USN(in caps): "<<endl;     //print only result
@@ -218,5 +227,52 @@ int main()
             cout<<"incorrect option"<<endl;
         }
     }while(option_X !="3");
+=======
+        switch(option_X)
+        {
+           case 1 : cout<<"Enter the USN(in caps): "<<endl;     //print only result
+                    cin>>ip_usn;
+                    cout<<endl<<endl;
+                    cout<<"********************************************************************************"<<endl;
+                     for(i=0;i<=NUM-1;i++)
+                     {
+                         st[i].print_details(ip_usn);
+                     }
+                     cout<<endl<<endl<<"********************************************************************************"<<endl;
+                     cout<<endl;
+                     break;
+           case 2 : cout<<"Enter the USN(in caps): "<<endl;     //print the result analysis
+                    cin>>ip_usn;
+                    cout<<endl<<endl;
+                    cout<<"********************************************************************************"<<endl;
+                    for(i=0;i<=NUM-1;i++)
+                    {
+                        st[i].print_details(ip_usn);
+                    }
+                    cout<<endl<<endl<<"This GPA is tied with:"<<endl;
+                    for(int i = 0; i < NUM; i++)
+                    {
+                        print_equals(st[i]);
+                    }
+                    cout<<endl<<"********************************************************************************"<<endl;
+                    break;
+           case 3 :
+                    cout<<"Source code available at https://github.com/hgsujay/SGPA_Cpp   "<<endl;
+                    cout<<"press any key to quit\n";
+                    getch();
+
+                    cout<<"Quiting the process...";
+                    for(int i=0;i<=10000000;i++)
+                    {
+                        cout<<"";
+                    }
+                    break;
+
+            default :
+                        cout<<"incorrect option"<<endl;
+                        break;
+        }
+    }while(option_X != 3);
+>>>>>>> 6867d2d3409a49523ad37caa3203753c66097434
     return 0;
 }
